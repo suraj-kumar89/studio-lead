@@ -3,9 +3,9 @@ export default function Diagnosis() {
     <section
       id="diagnosis"
       className="
-        py-[90px]
-        sm:py-[120px]
-        lg:py-[160px]
+        py-[50px]
+        sm:py-[60px]
+        lg:py-[60px]
       "
     >
       <div

@@ -98,7 +98,7 @@ export default function Process() {
   <div className="hidden lg:block">
     <section
       ref={sectionRef}
-      className="relative border-t border-white/10 py-[160px] pb-[200px]"
+      className="relative border-t border-white/10 py-[40px] pb-[50px]"
     >
       <div className="max-w-[1100px] mx-auto px-6">
 

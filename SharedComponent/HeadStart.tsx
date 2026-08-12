@@ -100,9 +100,9 @@ export default function HeadStart() {
   return (
     <section
       className="
-    py-[80px]
-    sm:py-[100px]
-    lg:py-[120px]
+    py-[20px]
+    sm:py-[40px]
+    lg:py-[50px]
 
     text-white
     overflow-x-hidden

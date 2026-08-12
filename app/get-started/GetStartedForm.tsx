@@ -438,51 +438,7 @@ function IconArrow() {
   );
 }
 
-function Header() {
-  const href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(
-    "Hi Bluvo, I'd like to talk about a website project.",
-  )}`;
 
-  return (
-    <header>
-      <div className="wrap">
-        <div className="brand">
-          <img
-            src="/bluvo-logo.png"
-            alt="Bluvo Studio"
-            className="brand-logo"
-          />
-          <a
-            className="brand-cta"
-            href={href}
-            target="_blank"
-            rel="noopener"
-            onClick={() => pushEvent("header_cta_click")}
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M20 12.05C20 16.47 16.42 20.05 12 20.05C10.59 20.05 9.27 19.68 8.13 19.04L4 20.05L5.08 16.08C4.39 14.9 4 13.53 4 12.05C4 7.63 7.58 4.05 12 4.05C16.42 4.05 20 7.63 20 12.05Z"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M9.2 10.2C9.2 10.2 9.7 13 12.7 14.3C12.7 14.3 13.5 13.7 14 13.8C14.5 13.9 15.7 14.8 15.7 15.2C15.7 15.6 15 16.5 13.9 16.5C12.8 16.5 10.9 15.9 9.3 14.4C7.7 12.9 7 11.1 7 10C7 8.9 7.9 8.2 8.3 8.2C8.7 8.2 9.5 9.4 9.6 9.9C9.7 10.3 9.2 10.2 9.2 10.2Z"
-                fill="currentColor"
-              />
-            </svg>
-            <span>WhatsApp</span>
-          </a>
-        </div>
-      </div>
-    </header>
-  );
-}
 
 function Hero() {
   return (
@@ -772,6 +728,7 @@ function Navigation({
     <div className="nav">
       <div className="wrap">
         <div className="nav-inner">
+
           {step !== 1 && (
             <button
               className="btn btn-back"
@@ -780,7 +737,11 @@ function Navigation({
               onClick={onBack}
               disabled={loading}
             >
-              <svg viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <svg
+                viewBox="0 0 14 14"
+                fill="none"
+                aria-hidden="true"
+              >
                 <path
                   d="M9 12L4 7L9 2"
                   stroke="currentColor"
@@ -805,18 +766,23 @@ function Navigation({
               </>
             ) : (
               <>
-                <span>{step === 3 ? "Send my details" : "Continue"}</span>
+                <span>
+                  {step === 3 ? "Send my details" : "Continue"}
+                </span>
                 <IconArrow />
               </>
             )}
           </button>
+
         </div>
-        <p className="nav-note mono">{navNote}</p>
+
+        <p className="nav-note mono">
+          {navNote}
+        </p>
       </div>
     </div>
   );
 }
-
 function SuccessView({ name }: { name: string }) {
   const firstName = name.split(" ")[0] || "there";
   const message = `Hi Bluvo, I just submitted the form. I'm ${name} from ${
@@ -1209,21 +1175,29 @@ function validateCurrentStep() {
       if (!data?.success) {
         throw new Error(data?.message || "Lead submission failed.");
       }
-      if (typeof window !== "undefined" && window.fbq) {
-  window.fbq("track", "Lead");
-}
 
-   if (scored.band === "Decline") {
+    if (scored.band === "Decline") {
   setResult("decline");
   pushEvent("lead_declined");
-} else {
-  setResult("success");
 
-  // Redirect to home page after successful submission
-  setTimeout(() => {
-    window.location.href = "/";
-  }, 1000);
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+
+  return;
 }
+
+// Lead successfully submitted
+pushEvent("lead_submitted", {
+  lead_band: scored.band,
+  lead_score: scored.score,
+});
+
+// Redirect to Book a Call page
+window.location.href = "/book-a-call";
+
+      window.scrollTo({ top: 0 });
     } catch (error: unknown) {
       console.error("[Bluvo] Submit failed:", error);
 
@@ -1412,7 +1386,7 @@ function validateCurrentStep() {
 
   return (
     <div id="get-started-page">
-      <Header />
+      
       <Hero />
       <Progress step={step} />
 

@@ -1,0 +1,383 @@
+/* ============================================
+   THANK YOU PAGE
+============================================ */
+
+.thankyou-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #08080a;
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+
+/* ============================================
+   THANK YOU SECTION
+============================================ */
+
+.thankyou-section {
+  position: relative;
+
+  min-height: calc(100vh - 100px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 24px;
+
+  background:
+    radial-gradient(
+      circle at 50% 45%,
+      rgba(51, 133, 230, 0.14),
+      transparent 38%
+    );
+}
+
+
+/* ============================================
+   BACKGROUND GLOW
+============================================ */
+
+.thankyou-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 520px;
+  height: 520px;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: rgba(51, 133, 230, 0.055);
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+
+/* ============================================
+   CONTENT
+============================================ */
+
+.thankyou-content {
+  position: relative;
+  z-index: 2;
+
+  width: min(760px, 100%);
+
+  margin: 0 auto;
+
+  text-align: center;
+}
+
+
+/* ============================================
+   LABEL
+============================================ */
+
+.thankyou-label {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 24px;
+
+  padding: 8px 14px;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.025);
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-family: "JetBrains Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.16em;
+
+  line-height: 1;
+}
+
+
+/* ============================================
+   SMALL DOT IN LABEL
+============================================ */
+
+.thankyou-label::before {
+  content: "";
+
+  width: 6px;
+  height: 6px;
+
+  margin-right: 9px;
+
+  border-radius: 50%;
+
+  background: #3385e6;
+
+  box-shadow:
+    0 0 12px rgba(51, 133, 230, 0.7);
+}
+
+
+/* ============================================
+   HEADING
+============================================ */
+
+.thankyou-content h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(64px, 10vw, 120px);
+
+  font-weight: 500;
+
+  line-height: 0.92;
+
+  letter-spacing: -0.065em;
+}
+
+
+/* ============================================
+   ITALIC BLUE WORD
+============================================ */
+
+.thankyou-content h1 em {
+  color: #3385e6;
+
+  font-family: Georgia, "Times New Roman", serif;
+
+  font-weight: 400;
+
+  font-style: italic;
+
+  letter-spacing: -0.045em;
+}
+
+
+/* ============================================
+   DESCRIPTION
+============================================ */
+
+.thankyou-content p {
+  width: min(570px, 100%);
+
+  margin: 30px auto 0;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  line-height: 1.65;
+}
+
+
+/* ============================================
+   BUTTON
+============================================ */
+
+.thankyou-btn {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 170px;
+
+  min-height: 52px;
+
+  margin-top: 38px;
+
+  padding: 0 28px;
+
+  border: 1px solid transparent;
+
+  border-radius: 999px;
+
+  background: #ffffff;
+
+  color: #000000;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+/* ============================================
+   BUTTON HOVER
+============================================ */
+
+.thankyou-btn:hover {
+  background: #3385e6;
+
+  color: #ffffff;
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 14px 40px rgba(51, 133, 230, 0.25);
+}
+
+
+/* ============================================
+   BUTTON ACTIVE
+============================================ */
+
+.thankyou-btn:active {
+  transform: translateY(-1px);
+}
+
+
+/* ============================================
+   BUTTON ARROW
+============================================ */
+
+.thankyou-btn::after {
+  content: "→";
+
+  margin-left: 10px;
+
+  font-size: 17px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.thankyou-btn:hover::after {
+  transform: translateX(4px);
+}
+
+
+/* ============================================
+   FOOTER COMPATIBILITY
+============================================ */
+
+.thankyou-page footer {
+  position: relative;
+  z-index: 2;
+}
+
+
+/* ============================================
+   TABLET
+============================================ */
+
+@media (max-width: 900px) {
+
+  .thankyou-section {
+    min-height: calc(100vh - 80px);
+
+    padding: 90px 24px;
+  }
+
+  .thankyou-content h1 {
+    font-size: clamp(60px, 12vw, 100px);
+  }
+
+}
+
+
+/* ============================================
+   MOBILE
+============================================ */
+
+@media (max-width: 640px) {
+
+  .thankyou-section {
+    min-height: calc(100vh - 70px);
+
+    padding: 70px 20px;
+  }
+
+  .thankyou-section::before {
+    width: 360px;
+    height: 360px;
+
+    filter: blur(80px);
+  }
+
+  .thankyou-label {
+    margin-bottom: 20px;
+
+    font-size: 9px;
+
+    padding: 8px 12px;
+  }
+
+  .thankyou-content h1 {
+    font-size: clamp(58px, 18vw, 88px);
+
+    line-height: 0.94;
+  }
+
+  .thankyou-content p {
+    margin-top: 24px;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+  }
+
+  .thankyou-btn {
+    width: 100%;
+    max-width: 280px;
+
+    min-height: 52px;
+
+    margin-top: 30px;
+  }
+
+}
+
+
+/* ============================================
+   SMALL MOBILE
+============================================ */
+
+@media (max-width: 400px) {
+
+  .thankyou-section {
+    padding: 60px 16px;
+  }
+
+  .thankyou-content h1 {
+    font-size: 58px;
+  }
+
+  .thankyou-content p {
+    font-size: 15px;
+  }
+
+}

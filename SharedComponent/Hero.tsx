@@ -14,16 +14,16 @@ export default function Hero() {
         max-w-[1200px]
         mx-auto
 
-        pt-[120px]
-        sm:pt-[150px]
-        md:pt-[170px]
-        lg:pt-[180px]
+        pt-[20px]
+        sm:pt-[50px]
+        md:pt-[70px]
+        lg:pt-[80px]
 
         pb-[80px]
-        sm:pb-[100px]
-        lg:pb-[120px]
+        sm:pb-[60px]
+        lg:pb-[90px]
 
-        scroll-mt-32
+        scroll-mt-3
 
         overflow-hidden
       "

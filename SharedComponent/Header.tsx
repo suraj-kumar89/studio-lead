@@ -58,13 +58,10 @@ export default function ContactusHeader() {
                 </nav>
 
                 {/* RIGHT - BUTTON */}
-                <div className="hidden md:flex flex-1 justify-end">
-                    <Link href="/contact_us">
-                        <button className="flex items-center gap-2 px-4 py-2 rounded-full bg-white text-[#08080a] text-sm font-medium hover:bg-gray-100 transition">
-                            Talk to us
-                        </button>
-                    </Link>
-                </div>
+               <Link href="/book-a-call" className="btn-bullseye">
+  <span className="btn-default">Let’s Talk</span>
+  <span className="btn-hover">Book a call</span>
+</Link>
 
                 {/* MOBILE MENU BUTTON */}
                 <div className="flex md:hidden flex-1 justify-end">

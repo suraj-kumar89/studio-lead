@@ -202,7 +202,7 @@ export default function Framework1() {
         {/* HEADER */}
         <div className="mb-[60px]">
 
-          <div className="flex items-center gap-3 text-[11px] uppercase tracking-[1.5px] text-[#6c6c78] mb-6">
+          <div className="flex items-center gap-3 text-[11px] uppercase tracking-[1.5px] text-[#6c6c78] mb-6 mt-[40px]">
             <span className="w-6 h-[1px] bg-white/20"></span>
             <span>/ 03</span>
             <span>How we think</span>

@@ -3,6 +3,7 @@ import Script from "next/script";
 import ContactusHeader from "@/SharedComponent/Header";
 import "./globals.css";
 import { Inter_Tight } from "next/font/google";
+import Footer from "@/SharedComponent/Footer";
 
 const interTight = Inter_Tight({
   subsets: ["latin"],
@@ -29,7 +30,7 @@ export default function RootLayout({
         {/* =====================================================
             META PIXEL
             ===================================================== */}
-        <Script id="meta-pixel" strategy="beforeInteractive">
+        <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -131,8 +132,11 @@ export default function RootLayout({
         <div className="relative z-20">
           <ContactusHeader />
           {children}
+         
         </div>
+        
       </body>
+      
     </html>
   );
 }

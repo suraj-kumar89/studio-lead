@@ -7,7 +7,7 @@ import {
 } from "react-icons/si";
 export default function Toolkit() {
   return (
-    <section className="relative border-t border-white/10 py-[160px]">
+    <section className="relative border-t border-white/10 py-[60px]">
       <div className="max-w-[1200px] mx-auto px-6">
 
         {/* HEADER */}

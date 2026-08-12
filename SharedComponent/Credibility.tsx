@@ -170,8 +170,8 @@ export default function Credibility() {
         sm:grid-cols-2
         lg:grid-cols-3
 
-        gap-[14px]
-        sm:gap-[16px]
+        gap-[10px]
+        sm:gap-[12px]
 
         max-w-[980px]
         mx-auto
@@ -193,7 +193,7 @@ export default function Credibility() {
         },
         {
           value: "8",
-          accent: " yr",
+          accent: " yrs",
           label: "of pattern recognition",
           meta: "SAME LESSONS, AGAIN & AGAIN",
         },

@@ -1,0 +1,174 @@
+/* ============================================
+   BOOK CALL PAGE
+============================================ */
+
+.book-call-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #08080a;
+  color: #ffffff;
+}
+
+
+/* ============================================
+   BOOKING SECTION
+============================================ */
+
+.book-demo-section {
+  width: 100%;
+
+  min-height: 900px;
+
+  padding: 80px 0 100px;
+
+  background:
+    radial-gradient(
+      circle at 50% 10%,
+      rgba(51, 133, 230, 0.13),
+      transparent 45%
+    );
+}
+
+
+/* ============================================
+   HEADING
+============================================ */
+
+.book-heading {
+  width: min(760px, calc(100% - 40px));
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+
+.book-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.18em;
+}
+
+
+.book-heading h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(55px, 8vw, 105px);
+
+  font-weight: 500;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+}
+
+
+.book-heading h1 em {
+  color: #3385e6;
+
+  font-family: Georgia, serif;
+
+  font-weight: 400;
+
+  font-style: italic;
+}
+
+
+.book-heading p {
+  width: min(600px, 100%);
+
+  margin: 28px auto 0;
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 17px;
+
+  line-height: 1.6;
+}
+
+
+/* ============================================
+   CALENDLY
+============================================ */
+
+.calendly-inline-widget {
+  width: min(1200px, calc(100% - 80px));
+
+  min-width: 320px;
+
+  height: 760px;
+
+  margin: 0 auto;
+}
+
+
+/* ============================================
+   MOBILE
+============================================ */
+
+@media (max-width: 640px) {
+
+  .book-demo-section {
+    min-height: 750px;
+
+    padding: 55px 0 70px;
+  }
+
+
+  .book-heading {
+    margin-bottom: 30px;
+  }
+
+
+  .book-heading h1 {
+    font-size: clamp(55px, 17vw, 90px);
+  }
+
+
+  .book-heading p {
+    padding: 0 10px;
+
+    font-size: 15px;
+  }
+
+
+  .calendly-inline-widget {
+    width: calc(100% - 20px);
+
+    min-width: 300px;
+
+    height: 700px;
+  }
+}
+
+
+/* ============================================
+   SMALL MOBILE
+============================================ */
+
+@media (max-width: 480px) {
+
+  .book-demo-section {
+    padding-top: 40px;
+  }
+
+
+  .calendly-inline-widget {
+    width: 100%;
+
+    min-width: 280px;
+
+    height: 680px;
+  }
+}

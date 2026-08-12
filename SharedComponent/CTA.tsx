@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/dist/client/link";
+
 export default function CTA() {
     return (
         <section className="relative border-t border-white/10 py-[200px] md:py-[100px] overflow-hidden">
@@ -34,21 +36,21 @@ export default function CTA() {
                 <div className="flex flex-row justify-center items-center gap-4 mb-[48px] flex-wrap">
 
                     {/* PRIMARY */}
-                    <a
-                        href="https://cal.com/shitanshu"
-                        target="_blank"
+                    <Link
+                        href="/book-a-call"
                         className="
-      group
-      px-8 py-4 rounded-full
-      bg-white text-black
-      font-semibold text-[16px]
-      flex items-center justify-center gap-2
-      transition-all duration-300
-      hover:-translate-y-[2px]
-      hover:shadow-[0_12px_36px_rgba(255,255,255,0.2)]
-    "
+    group
+    px-8 py-4 rounded-full
+    bg-white text-black
+    font-semibold text-[16px]
+    flex items-center justify-center gap-2
+    transition-all duration-300
+    hover:-translate-y-[2px]
+    hover:shadow-[0_12px_36px_rgba(255,255,255,0.2)]
+  "
                     >
                         Book a call
+
                         <svg
                             viewBox="0 0 14 14"
                             className="w-[14px] transition-transform duration-200 group-hover:translate-x-[3px]"
@@ -61,7 +63,7 @@ export default function CTA() {
                                 strokeLinecap="round"
                             />
                         </svg>
-                    </a>
+                    </Link>
 
                     {/* SECONDARY */}
                     <a
