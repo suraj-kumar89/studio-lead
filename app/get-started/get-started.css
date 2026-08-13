@@ -40,7 +40,7 @@
 #get-started-page .proof-label{font-size:8px; color:var(--text-3); margin-top:5px; line-height:1.3}
 
 /* ---------- Progress ---------- */
-#get-started-page .progress{position:sticky; top:0; z-index:40; background:rgba(8,8,10,0.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--line-1); padding:12px 0 11px; margin-top:8px}
+#get-started-page .progress{position:sticky; top:0; z-index:40; background:rgba(8,8,10,0.92); backdrop-filter:blur(12px);  padding:12px 0 11px; margin-top:8px}
 #get-started-page .progress-row{display:flex; align-items:center; justify-content:space-between; margin-bottom:9px}
 #get-started-page .progress-step-label{font-size:9.5px; color:var(--blue)}
 #get-started-page .progress-count{font-size:9.5px; color:var(--text-3)}
